@@ -85,9 +85,50 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-	NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	NSError *error = nil;
+	NSXMLDocument *xml = [[NSXMLDocument alloc] initWithData:data options:0 error:&error];
 	
-	NSLog(@"Received data: %@", string);
+//	if(error)
+//		NSLog(@"Error parsing XML: %@", error);	
+	
+	if([xml.rootElement.name isEqualToString:@"StageDisplayData"])
+	{
+		for(NSXMLNode *child in xml.rootElement.children)
+		{
+			if([child.name isEqualToString:@"Fields"])
+			{
+				NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+				
+				for(NSXMLNode *node in child.children)
+				{
+					if(node.kind == NSXMLElementKind)
+					{
+						NSXMLElement *field = (NSXMLElement *)node;
+						NSXMLNode *identifierAttribute = [field attributeForName:@"identifier"];
+						
+						if(identifierAttribute)
+						{
+							// Yes, this is a <Field> tag, with an identifier attribute
+							// Add this to the dictionary, and pull out all its other attribtues too
+							NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+							
+							for(NSXMLNode *attribute in field.attributes)
+								[attributes setObject:attribute.stringValue forKey:attribute.name];
+							
+							[dictionary setObject:attributes forKey:identifierAttribute.stringValue];
+						}
+					}
+				}
+				
+				self.data = dictionary;
+				
+				if([self.delegate respondsToSelector:@selector(stageDisplay:didRecieveData:)])
+					[self.delegate stageDisplay:self didRecieveData:self.data];
+				
+				break;
+			}
+		}
+	}
 	
 	// Read again
 	[self read];
