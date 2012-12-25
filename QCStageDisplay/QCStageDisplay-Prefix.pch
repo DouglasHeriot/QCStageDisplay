@@ -1,0 +1,6 @@
+//
+// Prefix header for all source files of the 'QCStageDisplay' target in the 'QCStageDisplay' project
+//
+
+#ifdef __OBJC__
+#endif
