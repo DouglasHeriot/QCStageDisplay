@@ -49,6 +49,7 @@
 		A56131801689A99800622ED3 /* QCStageDisplayTestClient.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = QCStageDisplayTestClient.1; sourceTree = "<group>"; };
 		A56131871689AA5E00622ED3 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		A56131891689AA6300622ED3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A561318D1689C66900622ED3 /* CurrentSlideDemo.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = CurrentSlideDemo.qtz; sourceTree = SOURCE_ROOT; };
 		A5B62B5816898D920092AF3B /* QCStageDisplay.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCStageDisplay.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B62B5B16898D920092AF3B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A5B62B5D16898D920092AF3B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -167,6 +168,7 @@
 				A5B62B6716898D920092AF3B /* QCStageDisplay-Info.plist */,
 				A5B62B6816898D920092AF3B /* InfoPlist.strings */,
 				A5B62B6E16898D920092AF3B /* QCStageDisplay-Prefix.pch */,
+				A561318D1689C66900622ED3 /* CurrentSlideDemo.qtz */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
