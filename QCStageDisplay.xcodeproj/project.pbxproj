@@ -248,8 +248,9 @@
 		A5B62B7216898D920092AF3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QCStageDisplay/QCStageDisplay-Prefix.pch";
 				INFOPLIST_FILE = "QCStageDisplay/QCStageDisplay-Info.plist";
@@ -262,8 +263,9 @@
 		A5B62B7316898D920092AF3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QCStageDisplay/QCStageDisplay-Prefix.pch";
 				INFOPLIST_FILE = "QCStageDisplay/QCStageDisplay-Info.plist";
@@ -292,6 +294,7 @@
 				A5B62B7316898D920092AF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
