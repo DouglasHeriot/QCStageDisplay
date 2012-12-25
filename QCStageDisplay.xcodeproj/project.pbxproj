@@ -16,6 +16,8 @@
 		A56131861689AA1F00622ED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A561316F1689A08600622ED3 /* GCDAsyncSocket.m */; };
 		A56131881689AA5E00622ED3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131871689AA5E00622ED3 /* CoreServices.framework */; };
 		A561318A1689AA6300622ED3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131891689AA6300622ED3 /* Security.framework */; };
+		A561318B1689B19F00622ED3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131891689AA6300622ED3 /* Security.framework */; };
+		A561318C1689B1A300622ED3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131871689AA5E00622ED3 /* CoreServices.framework */; };
 		A5B62B5C16898D920092AF3B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5B16898D920092AF3B /* Cocoa.framework */; };
 		A5B62B5E16898D920092AF3B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5D16898D920092AF3B /* Quartz.framework */; };
 		A5B62B6A16898D920092AF3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5B62B6816898D920092AF3B /* InfoPlist.strings */; };
@@ -75,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A561318C1689B1A300622ED3 /* CoreServices.framework in Frameworks */,
+				A561318B1689B19F00622ED3 /* Security.framework in Frameworks */,
 				A5B62B5C16898D920092AF3B /* Cocoa.framework in Frameworks */,
 				A5B62B5E16898D920092AF3B /* Quartz.framework in Frameworks */,
 			);

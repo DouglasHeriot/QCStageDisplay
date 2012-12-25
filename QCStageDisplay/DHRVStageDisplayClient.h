@@ -21,6 +21,7 @@
 @property (readonly, copy) NSDictionary *data;
 @property (copy) NSString *password;
 @property (weak) id<DHRVStageDisplayClientDelegate> delegate;
+@property (readonly, nonatomic) BOOL connected;
 
 - (BOOL)connectToHost:(NSString *)host port:(uint16_t)port;
 - (void)disconnect;

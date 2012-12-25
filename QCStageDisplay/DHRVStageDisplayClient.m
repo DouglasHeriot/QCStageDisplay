@@ -81,6 +81,11 @@
 	return crlf;
 }
 
+- (BOOL)connected
+{
+	return self.socket.isConnected;
+}
+
 #pragma mark Socket Delegate
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
@@ -113,7 +118,19 @@
 							NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
 							
 							for(NSXMLNode *attribute in field.attributes)
-								[attributes setObject:attribute.stringValue forKey:attribute.name];
+							{
+								NSString *stringValue = attribute.stringValue;
+								if(!stringValue)
+									stringValue = @"";
+								
+								[attributes setObject:stringValue forKey:attribute.name];
+							}
+							
+							NSString *stringValue = field.stringValue;
+							if(!stringValue)
+								stringValue = @"";
+							
+							[attributes setObject:stringValue forKey:@"value"];
 							
 							[dictionary setObject:attributes forKey:identifierAttribute.stringValue];
 						}

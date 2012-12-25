@@ -10,17 +10,24 @@
 #import <OpenGL/CGLMacro.h>
 
 #import "DHQCStageDisplayPlugIn.h"
+#import "DHRVStageDisplayClient.h"
 
 #define	kQCPlugIn_Name				@"ProPresenter Stage Display"
 #define	kQCPlugIn_Description		@"Connects to a ProPresenter with Remote Stage Display server enabled (officially used by the Stage Display app on iOS)"
 
-@interface DHQCStageDisplayPlugIn()
+@interface DHQCStageDisplayPlugIn() <DHRVStageDisplayClientDelegate>
+@property (strong) DHRVStageDisplayClient *client;
+@property BOOL didUpdateData;
 @end
 
 @implementation DHQCStageDisplayPlugIn
 
 // Here you need to declare the input / output properties as dynamic as Quartz Composer will handle their implementation
 //@dynamic inputFoo, outputBar;
+@dynamic inputPort;
+@dynamic inputPassword;
+@dynamic inputHost;
+@dynamic outputData;
 
 + (NSDictionary *)attributes
 {
@@ -32,10 +39,10 @@
 {
 	// Specify the optional attributes for property based ports (QCPortAttributeNameKey, QCPortAttributeDefaultValueKey...).
 	
-	if([key isEqualToString:@"inputIP"])
+	if([key isEqualToString:@"inputHost"])
 	{
 		return @{
-		   QCPortAttributeNameKey: @"IP",
+		   QCPortAttributeNameKey: @"Host",
 		   QCPortAttributeTypeKey: QCPortTypeString,
 		   QCPortAttributeDefaultValueKey: @"localhost"};
 	}
@@ -44,8 +51,8 @@
 		return @{QCPortAttributeNameKey: @"Port",
 		   QCPortAttributeTypeKey: QCPortTypeIndex,
 		   QCPortAttributeMinimumValueKey: @0,
-		   QCPortAttributeMaximumValueKey: @65536};
-		   
+		   QCPortAttributeMaximumValueKey: @65536,
+		   QCPortAttributeDefaultValueKey: @54321};
 	}
 	else if([key isEqualToString:@"inputPassword"])
 	{
@@ -72,19 +79,26 @@
 + (QCPlugInTimeMode)timeMode
 {
 	// Return the time dependency mode of the plug-in: kQCPlugInTimeModeNone, kQCPlugInTimeModeIdle or kQCPlugInTimeModeTimeBase.
-	return kQCPlugInTimeModeNone;
+	return kQCPlugInTimeModeIdle;
 }
 
 - (id)init
 {
 	self = [super init];
-	if (self) {
-		// Allocate any permanent resource required by the plug-in.
+	if (self)
+	{
+		self.client = [[DHRVStageDisplayClient alloc] init];
+		self.client.delegate = self;
+		self.didUpdateData = NO;
 	}
 	
 	return self;
 }
 
+- (void)stageDisplay:(DHRVStageDisplayClient *)client didRecieveData:(NSDictionary *)data
+{
+	self.didUpdateData = YES;
+}
 
 @end
 
@@ -114,6 +128,15 @@
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	*/
 	
+	if(!self.client.connected)
+		[self.client connectToHost:self.inputHost port:self.inputPort.integerValue];
+	
+	if(self.didUpdateData)
+	{
+		self.outputData = self.client.data;
+		self.didUpdateData = NO;
+	}
+	
 	return YES;
 }
 
@@ -125,6 +148,7 @@
 - (void)stopExecution:(id <QCPlugInContext>)context
 {
 	// Called by Quartz Composer when rendering of the composition stops: perform any required cleanup for the plug-in.
+	[self.client disconnect];
 }
 
 @end
