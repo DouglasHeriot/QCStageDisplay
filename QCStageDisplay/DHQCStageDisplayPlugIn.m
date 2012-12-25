@@ -129,7 +129,7 @@
 	*/
 	
 	if(!self.client.connected)
-		[self.client connectToHost:self.inputHost port:self.inputPort.integerValue];
+		[self.client connectToHost:self.inputHost port:self.inputPort];
 	
 	if(self.didUpdateData)
 	{

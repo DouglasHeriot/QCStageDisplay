@@ -15,7 +15,7 @@
 //@property (copy) NSString* outputBar;
 
 @property (copy) NSString *inputHost;
-@property (copy) NSString *inputPort;
+@property NSUInteger inputPort;
 @property (copy) NSString *inputPassword;
 @property (copy) NSDictionary *outputData;
 
