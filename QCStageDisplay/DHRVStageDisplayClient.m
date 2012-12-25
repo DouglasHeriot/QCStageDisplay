@@ -11,8 +11,10 @@
 #import "GCDAsyncSocket.h"
 
 @interface DHRVStageDisplayClient() <GCDAsyncSocketDelegate>
+{
+	dispatch_queue_t _queue;
+}
 @property (strong) GCDAsyncSocket *socket;
-@property (strong) dispatch_queue_t queue;
 @property (copy) NSDictionary *data;
 
 + (NSData *)delimiter;
@@ -28,11 +30,16 @@
 {
 	if(self = [super init])
 	{
-		self.queue = dispatch_queue_create("com.douglasheriot.qc.StageDisplay", DISPATCH_QUEUE_SERIAL);
-		self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:self.queue];
+		_queue = dispatch_queue_create("com.douglasheriot.qc.StageDisplay", DISPATCH_QUEUE_SERIAL);
+		self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:_queue];
 		self.password = @"password";
 	}
 	return self;
+}
+
+- (void)dealloc
+{
+	dispatch_release(_queue);
 }
 
 - (BOOL)connectToHost:(NSString *)host port:(uint16_t)port
