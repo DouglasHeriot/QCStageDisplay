@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56131701689A08600622ED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A561316F1689A08600622ED3 /* GCDAsyncSocket.m */; };
+		A56131731689A0AC00622ED3 /* DHRVStageDisplayClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */; };
 		A5B62B5C16898D920092AF3B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5B16898D920092AF3B /* Cocoa.framework */; };
 		A5B62B5E16898D920092AF3B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5D16898D920092AF3B /* Quartz.framework */; };
 		A5B62B6A16898D920092AF3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5B62B6816898D920092AF3B /* InfoPlist.strings */; };
-		A5B62B6D16898D920092AF3B /* QCStageDisplayPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B62B6C16898D920092AF3B /* QCStageDisplayPlugIn.m */; };
+		A5B62B6D16898D920092AF3B /* DHQCStageDisplayPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B62B6C16898D920092AF3B /* DHQCStageDisplayPlugIn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A561316E1689A08600622ED3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		A561316F1689A08600622ED3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		A56131711689A0AC00622ED3 /* DHRVStageDisplayClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHRVStageDisplayClient.h; sourceTree = "<group>"; };
+		A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHRVStageDisplayClient.m; sourceTree = "<group>"; };
 		A5B62B5816898D920092AF3B /* QCStageDisplay.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCStageDisplay.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B62B5B16898D920092AF3B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A5B62B5D16898D920092AF3B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -22,8 +28,8 @@
 		A5B62B6216898D920092AF3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5B62B6716898D920092AF3B /* QCStageDisplay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QCStageDisplay-Info.plist"; sourceTree = "<group>"; };
 		A5B62B6916898D920092AF3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A5B62B6B16898D920092AF3B /* QCStageDisplayPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QCStageDisplayPlugIn.h; sourceTree = "<group>"; };
-		A5B62B6C16898D920092AF3B /* QCStageDisplayPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCStageDisplayPlugIn.m; sourceTree = "<group>"; };
+		A5B62B6B16898D920092AF3B /* DHQCStageDisplayPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHQCStageDisplayPlugIn.h; sourceTree = "<group>"; };
+		A5B62B6C16898D920092AF3B /* DHQCStageDisplayPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHQCStageDisplayPlugIn.m; sourceTree = "<group>"; };
 		A5B62B6E16898D920092AF3B /* QCStageDisplay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QCStageDisplay-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,9 +86,13 @@
 		A5B62B6516898D920092AF3B /* QCStageDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				A5B62B6B16898D920092AF3B /* QCStageDisplayPlugIn.h */,
-				A5B62B6C16898D920092AF3B /* QCStageDisplayPlugIn.m */,
+				A5B62B6B16898D920092AF3B /* DHQCStageDisplayPlugIn.h */,
+				A5B62B6C16898D920092AF3B /* DHQCStageDisplayPlugIn.m */,
+				A561316E1689A08600622ED3 /* GCDAsyncSocket.h */,
+				A561316F1689A08600622ED3 /* GCDAsyncSocket.m */,
 				A5B62B6616898D920092AF3B /* Supporting Files */,
+				A56131711689A0AC00622ED3 /* DHRVStageDisplayClient.h */,
+				A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */,
 			);
 			path = QCStageDisplay;
 			sourceTree = "<group>";
@@ -176,7 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B62B6D16898D920092AF3B /* QCStageDisplayPlugIn.m in Sources */,
+				A5B62B6D16898D920092AF3B /* DHQCStageDisplayPlugIn.m in Sources */,
+				A56131701689A08600622ED3 /* GCDAsyncSocket.m in Sources */,
+				A56131731689A0AC00622ED3 /* DHRVStageDisplayClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

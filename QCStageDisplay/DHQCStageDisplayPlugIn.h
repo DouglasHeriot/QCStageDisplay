@@ -8,7 +8,7 @@
 
 #import <Quartz/Quartz.h>
 
-@interface QCStageDisplayPlugIn : QCPlugIn
+@interface DHQCStageDisplayPlugIn : QCPlugIn
 
 // Declare here the properties to be used as input and output ports for the plug-in e.g.
 //@property double inputFoo;
@@ -16,6 +16,7 @@
 
 @property (copy) NSString *inputIP;
 @property (copy) NSNumber *inputPort;
+@property (copy) NSString *inputPassword;
 @property (copy) NSDictionary *outputData;
 
 @end

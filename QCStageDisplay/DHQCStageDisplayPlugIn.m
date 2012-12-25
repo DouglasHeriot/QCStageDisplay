@@ -9,15 +9,15 @@
 // It's highly recommended to use CGL macros instead of changing the current context for plug-ins that perform OpenGL rendering
 #import <OpenGL/CGLMacro.h>
 
-#import "QCStageDisplayPlugIn.h"
+#import "DHQCStageDisplayPlugIn.h"
 
 #define	kQCPlugIn_Name				@"ProPresenter Stage Display"
 #define	kQCPlugIn_Description		@"Connects to a ProPresenter with Remote Stage Display server enabled (officially used by the Stage Display app on iOS)"
 
-@interface QCStageDisplayPlugIn()
+@interface DHQCStageDisplayPlugIn()
 @end
 
-@implementation QCStageDisplayPlugIn
+@implementation DHQCStageDisplayPlugIn
 
 // Here you need to declare the input / output properties as dynamic as Quartz Composer will handle their implementation
 //@dynamic inputFoo, outputBar;
@@ -46,6 +46,12 @@
 		   QCPortAttributeMinimumValueKey: @0,
 		   QCPortAttributeMaximumValueKey: @65536};
 		   
+	}
+	else if([key isEqualToString:@"inputPassword"])
+	{
+		return @{QCPortAttributeNameKey: @"Password",
+		   QCPortAttributeTypeKey: QCPortTypeString,
+		   QCPortAttributeDefaultValueKey: @"password"};
 	}
 	else if([key isEqualToString:@"outputData"])
 	{
@@ -82,7 +88,7 @@
 
 @end
 
-@implementation QCStageDisplayPlugIn (Execution)
+@implementation DHQCStageDisplayPlugIn (Execution)
 
 - (BOOL)startExecution:(id <QCPlugInContext>)context
 {

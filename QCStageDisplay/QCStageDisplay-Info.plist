@@ -22,7 +22,7 @@
 	<string>Copyright © 2012 Douglas Heriot. All rights reserved.</string>
 	<key>QCPlugInClasses</key>
 	<array>
-		<string>QCStageDisplayPlugIn</string>
+		<string>DHQCStageDisplayPlugIn</string>
 	</array>
 </dict>
 </plist>
