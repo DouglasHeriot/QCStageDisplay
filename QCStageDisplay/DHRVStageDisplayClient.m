@@ -30,6 +30,7 @@
 	{
 		self.queue = dispatch_queue_create("com.douglasheriot.qc.StageDisplay", DISPATCH_QUEUE_SERIAL);
 		self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:self.queue];
+		self.password = @"password";
 	}
 	return self;
 }

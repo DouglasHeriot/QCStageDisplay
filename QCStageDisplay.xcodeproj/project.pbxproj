@@ -9,17 +9,44 @@
 /* Begin PBXBuildFile section */
 		A56131701689A08600622ED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A561316F1689A08600622ED3 /* GCDAsyncSocket.m */; };
 		A56131731689A0AC00622ED3 /* DHRVStageDisplayClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */; };
+		A561317A1689A99800622ED3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131791689A99800622ED3 /* Foundation.framework */; };
+		A561317D1689A99800622ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A561317C1689A99800622ED3 /* main.m */; };
+		A56131811689A99800622ED3 /* QCStageDisplayTestClient.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A56131801689A99800622ED3 /* QCStageDisplayTestClient.1 */; };
+		A56131851689AA1C00622ED3 /* DHRVStageDisplayClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */; };
+		A56131861689AA1F00622ED3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A561316F1689A08600622ED3 /* GCDAsyncSocket.m */; };
+		A56131881689AA5E00622ED3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131871689AA5E00622ED3 /* CoreServices.framework */; };
+		A561318A1689AA6300622ED3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56131891689AA6300622ED3 /* Security.framework */; };
 		A5B62B5C16898D920092AF3B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5B16898D920092AF3B /* Cocoa.framework */; };
 		A5B62B5E16898D920092AF3B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B62B5D16898D920092AF3B /* Quartz.framework */; };
 		A5B62B6A16898D920092AF3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5B62B6816898D920092AF3B /* InfoPlist.strings */; };
 		A5B62B6D16898D920092AF3B /* DHQCStageDisplayPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B62B6C16898D920092AF3B /* DHQCStageDisplayPlugIn.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A56131761689A99800622ED3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				A56131811689A99800622ED3 /* QCStageDisplayTestClient.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A561316E1689A08600622ED3 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		A561316F1689A08600622ED3 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		A56131711689A0AC00622ED3 /* DHRVStageDisplayClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHRVStageDisplayClient.h; sourceTree = "<group>"; };
 		A56131721689A0AC00622ED3 /* DHRVStageDisplayClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHRVStageDisplayClient.m; sourceTree = "<group>"; };
+		A56131781689A99800622ED3 /* QCStageDisplayTestClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QCStageDisplayTestClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56131791689A99800622ED3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A561317C1689A99800622ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A561317F1689A99800622ED3 /* QCStageDisplayTestClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QCStageDisplayTestClient-Prefix.pch"; sourceTree = "<group>"; };
+		A56131801689A99800622ED3 /* QCStageDisplayTestClient.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = QCStageDisplayTestClient.1; sourceTree = "<group>"; };
+		A56131871689AA5E00622ED3 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		A56131891689AA6300622ED3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A5B62B5816898D920092AF3B /* QCStageDisplay.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCStageDisplay.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B62B5B16898D920092AF3B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A5B62B5D16898D920092AF3B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -34,6 +61,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A56131751689A99800622ED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561318A1689AA6300622ED3 /* Security.framework in Frameworks */,
+				A56131881689AA5E00622ED3 /* CoreServices.framework in Frameworks */,
+				A561317A1689A99800622ED3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5B62B5416898D920092AF3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +83,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A561317B1689A99800622ED3 /* QCStageDisplayTestClient */ = {
+			isa = PBXGroup;
+			children = (
+				A561317C1689A99800622ED3 /* main.m */,
+				A56131801689A99800622ED3 /* QCStageDisplayTestClient.1 */,
+				A561317E1689A99800622ED3 /* Supporting Files */,
+			);
+			path = QCStageDisplayTestClient;
+			sourceTree = "<group>";
+		};
+		A561317E1689A99800622ED3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A561317F1689A99800622ED3 /* QCStageDisplayTestClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A5B62B4C16898D920092AF3B = {
 			isa = PBXGroup;
 			children = (
 				A5B62B6516898D920092AF3B /* QCStageDisplay */,
+				A561317B1689A99800622ED3 /* QCStageDisplayTestClient */,
 				A5B62B5A16898D920092AF3B /* Frameworks */,
 				A5B62B5916898D920092AF3B /* Products */,
 			);
@@ -59,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B62B5816898D920092AF3B /* QCStageDisplay.plugin */,
+				A56131781689A99800622ED3 /* QCStageDisplayTestClient */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +125,7 @@
 			children = (
 				A5B62B5B16898D920092AF3B /* Cocoa.framework */,
 				A5B62B5D16898D920092AF3B /* Quartz.framework */,
+				A56131791689A99800622ED3 /* Foundation.framework */,
 				A5B62B5F16898D920092AF3B /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -76,6 +134,8 @@
 		A5B62B5F16898D920092AF3B /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A56131891689AA6300622ED3 /* Security.framework */,
+				A56131871689AA5E00622ED3 /* CoreServices.framework */,
 				A5B62B6016898D920092AF3B /* AppKit.framework */,
 				A5B62B6116898D920092AF3B /* CoreData.framework */,
 				A5B62B6216898D920092AF3B /* Foundation.framework */,
@@ -110,6 +170,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A56131771689A99800622ED3 /* QCStageDisplayTestClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56131821689A99800622ED3 /* Build configuration list for PBXNativeTarget "QCStageDisplayTestClient" */;
+			buildPhases = (
+				A56131741689A99800622ED3 /* Sources */,
+				A56131751689A99800622ED3 /* Frameworks */,
+				A56131761689A99800622ED3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QCStageDisplayTestClient;
+			productName = QCStageDisplayTestClient;
+			productReference = A56131781689A99800622ED3 /* QCStageDisplayTestClient */;
+			productType = "com.apple.product-type.tool";
+		};
 		A5B62B5716898D920092AF3B /* QCStageDisplay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5B62B7116898D920092AF3B /* Build configuration list for PBXNativeTarget "QCStageDisplay" */;
@@ -150,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				A5B62B5716898D920092AF3B /* QCStageDisplay */,
+				A56131771689A99800622ED3 /* QCStageDisplayTestClient */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +260,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A56131741689A99800622ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561317D1689A99800622ED3 /* main.m in Sources */,
+				A56131851689AA1C00622ED3 /* DHRVStageDisplayClient.m in Sources */,
+				A56131861689AA1F00622ED3 /* GCDAsyncSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5B62B5316898D920092AF3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +294,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A56131831689A99800622ED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QCStageDisplayTestClient/QCStageDisplayTestClient-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A56131841689A99800622ED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QCStageDisplayTestClient/QCStageDisplayTestClient-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A5B62B6F16898D920092AF3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,6 +404,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A56131821689A99800622ED3 /* Build configuration list for PBXNativeTarget "QCStageDisplayTestClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56131831689A99800622ED3 /* Debug */,
+				A56131841689A99800622ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A5B62B5116898D920092AF3B /* Build configuration list for PBXProject "QCStageDisplay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
