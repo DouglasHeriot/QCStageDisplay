@@ -14,4 +14,8 @@
 //@property double inputFoo;
 //@property (copy) NSString* outputBar;
 
+@property (copy) NSString *inputIP;
+@property (copy) NSNumber *inputPort;
+@property (copy) NSDictionary *outputData;
+
 @end

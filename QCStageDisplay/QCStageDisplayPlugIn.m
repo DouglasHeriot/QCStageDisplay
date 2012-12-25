@@ -11,8 +11,11 @@
 
 #import "QCStageDisplayPlugIn.h"
 
-#define	kQCPlugIn_Name				@"QCStageDisplay"
-#define	kQCPlugIn_Description		@"QCStageDisplay description"
+#define	kQCPlugIn_Name				@"ProPresenter Stage Display"
+#define	kQCPlugIn_Description		@"Connects to a ProPresenter with Remote Stage Display server enabled (officially used by the Stage Display app on iOS)"
+
+@interface QCStageDisplayPlugIn()
+@end
 
 @implementation QCStageDisplayPlugIn
 
@@ -28,6 +31,29 @@
 + (NSDictionary *)attributesForPropertyPortWithKey:(NSString *)key
 {
 	// Specify the optional attributes for property based ports (QCPortAttributeNameKey, QCPortAttributeDefaultValueKey...).
+	
+	if([key isEqualToString:@"inputIP"])
+	{
+		return @{
+		   QCPortAttributeNameKey: @"IP",
+		   QCPortAttributeTypeKey: QCPortTypeString,
+		   QCPortAttributeDefaultValueKey: @"localhost"};
+	}
+	else if([key isEqualToString:@"inputPort"])
+	{
+		return @{QCPortAttributeNameKey: @"Port",
+		   QCPortAttributeTypeKey: QCPortTypeIndex,
+		   QCPortAttributeMinimumValueKey: @0,
+		   QCPortAttributeMaximumValueKey: @65536};
+		   
+	}
+	else if([key isEqualToString:@"outputData"])
+	{
+		return @{QCPortAttributeNameKey: @"Data",
+		   QCPortAttributeTypeKey: QCPortTypeStructure};
+	}
+	
+	
 	return nil;
 }
 
